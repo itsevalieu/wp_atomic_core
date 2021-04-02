@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article class="monthly-template" id="post-<?php the_ID(); ?>" style="border: 1px solid orange">
+<article class="monthly-template" id="post-<?php the_ID(); ?>">
     <div class="header-section">
         <header>
             <h1>The Lazy Tribune</h1>
@@ -23,8 +23,10 @@ defined( 'ABSPATH' ) || exit;
 	<div class="main-section">
         <?php get_template_part( 'monthly-templates/monthly', 'featured_post' ); ?>
 	</div>
-    <div class="right-section">right section</div>
-    <div class="bottom-section">bottom section</div>
+    <div class="right-section">
+        <?php get_template_part( 'monthly-templates/monthly', 'tiny_post' ); ?>
+    </div>
+    <div class="bottom-section"><?php get_template_part( 'monthly-templates/monthly', 'medium_post' ); ?></div>
 
 </article><!-- #post-## -->
 

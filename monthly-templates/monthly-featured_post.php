@@ -9,16 +9,16 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <?php
-$featured_post = get_field('featured_post');
-$summary = $featured_post->project_summary; //intro
-$subtitle = $featured_post->project_subtitle;
-$image =  get_field('project_featured_image', $featured_post->ID);
-$caption = $featured_post->project_featured_image_caption;
-$url = $featured_post->url;
+$post_object = get_field('featured_post');
+$title = $post_object->title;
+$summary = $post_object->summary;
+$image =  get_field('featured_image', $post_object->ID);
+$caption = $post_object->featured_image_caption;
+$url = $post_object->guid;
 ?>
-<div class="monthly-featured-post">
-    <?php if( $featured_post ):?>
-        <h2 class="title--large"><?php echo esc_html( $subtitle ); ?></h2>
+<div class="featured-post">
+    <?php if( $post_object ):?>
+        <h2 class="title--large"><?php echo esc_html( $title ); ?></h2>
         <div class="multi-column"><?php echo $summary ?></div>
         <a href="<?php echo esc_url($url)?>" target="_blank">
             <figure>
