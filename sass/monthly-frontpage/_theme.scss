@@ -1,0 +1,152 @@
+:root {
+  --font: "EB Garamond", serif;
+  --font-title: "Playfair Display", serif;
+  --font-sans-serif: "Manrope", sans-serif;
+  --black: #1c1f33;
+  --black--acc: #222;
+  --gray: #eee;
+  --gray-1: #ededed;
+}
+body {
+  font-size: 1.1rem;
+  background: var(--preview-bg);
+  font-family: var(--font);
+  color: var(--black);
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png)
+    repeat;
+  //   padding: 4rem 2rem;
+  line-height: 1.3;
+  text-align: justify;
+  column-break-inside: avoid;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: var(--black);
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: var(--black--acc);
+  }
+}
+
+aside {
+  text-align: center;
+  padding: 3px 0;
+  border: solid var(--black);
+  border-width: 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: space-between;
+  width: 100%;
+  @media (min-width: 700px) {
+    margin: 0;
+  }
+  > div {
+    border: solid var(--black);
+    border-width: 1px 0;
+    width: 100%;
+  }
+}
+
+// Typography
+h1 {
+  font: 50px/1 "Playfair Display SC";
+  text-align: center;
+  text-transform: uppercase;
+  @media (min-width: 700px) {
+    font: 800 70px/1 "Playfair Display SC";
+  }
+}
+
+h3 {
+  font: italic 20px var(--font-title);
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font: 20px/1.2 var(--font-title);
+}
+
+h5 {
+  font: 700 20px/1 var(--font);
+  transition: 0.3s ease;
+}
+
+p {
+  line-height: 1.3;
+  a {
+    display: inline;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+.title--large {
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 0.8rem;
+  @media (min-width: 700px) {
+    font-size: 42px;
+    margin: 0;
+  }
+}
+img {
+  width: 100%;
+  filter: grayscale(95%);
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--black);
+  transition: 0.5s ease;
+  &:hover {
+    filter: none;
+    transition: 0.5s ease;
+  }
+}
+figcaption {
+  font-style: italic;
+  font-size: 90%;
+}
+
+.monthly-template {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.2rem;
+  grid-template-areas:
+    "title title title"
+    "main main right"
+    "main main right"
+    "main main right"
+    "bottom bottom bottom";
+}
+.header-section {
+  grid-area: title;
+  //   border: 5px solid purple;
+  width: 100%;
+}
+.main-section {
+  grid-area: main;
+}
+.right-section {
+  grid-area: right;
+}
+.bottom-section {
+  grid-area: bottom;
+}
+
+.multi-column {
+  column-count: 2;
+  column-gap: 1.3rem;
+  margin-top: 0.75rem;
+  &-3 {
+    column-count: 3;
+  }
+}
