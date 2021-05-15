@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<?php 
-		if(!(is_page_template('page-templates/monthly-frontpage.php'))):
+		if(!(is_singular($post_types='issues'))):
 	?>
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 

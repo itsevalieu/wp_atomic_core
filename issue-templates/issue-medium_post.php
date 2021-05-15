@@ -1,6 +1,6 @@
 <?php
 /**
- * Monthly Medium Post Template
+ * Issue Medium Post Template
  *
  * @package understrap
  */

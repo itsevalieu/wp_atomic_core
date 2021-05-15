@@ -1,6 +1,6 @@
 <?php
 /**
- * Partial template for content in monthly-frontpage.php
+ * Partial template for content in single-issues.php
  *
  * @package understrap
  */
@@ -8,7 +8,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="monthly wrapper" style="border: 1px solid red">
+<div class="issue wrapper" style="border: 1px solid red">
 
     <div class="<?php echo esc_attr( $container ); ?>" id="content">
 
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 
                 <main class="site-main" id="main" role="main">
 
-                    <article class="monthly-template" id="post-<?php the_ID(); ?>">
+                    <article class="issue-template" id="post-<?php the_ID(); ?>">
                         <div class="header-section">
                             <header>
                                 <h1>The Lazy Tribune</h1>
@@ -30,12 +30,12 @@ defined( 'ABSPATH' ) || exit;
                             </aside>
                         </div>
                         <div class="main-section">
-                            <?php get_template_part( 'monthly-templates/monthly', 'featured_post' ); ?>
+                            <?php get_template_part( 'issue-templates/issue', 'featured_post' ); ?>
                         </div>
                         <div class="right-section">
-                            <?php get_template_part( 'monthly-templates/monthly', 'tiny_post' ); ?>
+                            <?php get_template_part( 'issue-templates/issue', 'tiny_post' ); ?>
                         </div>
-                        <div class="bottom-section"><?php get_template_part( 'monthly-templates/monthly', 'medium_post' ); ?></div>
+                        <div class="bottom-section"><?php get_template_part( 'issue-templates/issue', 'medium_post' ); ?></div>
 
                     </article><!-- #post-## -->
 

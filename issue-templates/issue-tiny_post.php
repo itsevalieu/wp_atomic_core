@@ -1,6 +1,6 @@
 <?php
 /**
- * Monthly Tiny Post Template
+ * Issue Tiny Post Template
  *
  * @package understrap
  */

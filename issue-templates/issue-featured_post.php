@@ -1,6 +1,6 @@
 <?php
 /**
- * Monthly Featured Post Template
+ * Issue Featured Post Template
  *
  * @package understrap
  */
