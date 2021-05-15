@@ -36,3 +36,4 @@ foreach ( $understrap_includes as $file ) {
 require_once(__DIR__. '/post-types/project.php');
 require_once(__DIR__. '/post-types/issue.php');
 require_once(__DIR__. '/admin-dashboard/dashboard-widgets.php');
+flush_rewrite_rules();
