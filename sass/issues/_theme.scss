@@ -124,16 +124,54 @@ figcaption {
     "title title title"
     "main main right"
     "main main right"
-    "main main right"
+    "middle middle right"
     "bottom bottom bottom";
 }
 .header-section {
   grid-area: title;
-  //   border: 5px solid purple;
   width: 100%;
 }
 .main-section {
   grid-area: main;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "article-1 article-1"
+    "article-2 article-3";
+  .article-1 {
+    // border: 1px solid blue;
+    grid-area: article-1;
+  }
+  .article-2 {
+    // border: 1px solid blue;
+    grid-area: article-2;
+  }
+  .article-3 {
+    // border: 1px solid blue;
+    grid-area: article-3;
+  }
+}
+.middle-section {
+  grid-area: middle;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "article-4 article-5 article-6";
+  .article-4 {
+    // border: 1px solid blue;
+    grid-area: article-4;
+  }
+  .article-5 {
+    // border: 1px solid blue;
+    grid-area: article-5;
+  }
+  .article-6 {
+    // border: 1px solid blue;
+    grid-area: article-6;
+  }
 }
 .right-section {
   border-left: 1px solid #000;

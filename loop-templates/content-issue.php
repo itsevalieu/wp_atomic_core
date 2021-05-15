@@ -8,46 +8,39 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="issue wrapper" style="border: 1px solid red">
 
-    <div class="<?php echo esc_attr( $container ); ?>" id="content">
+<article class="issue-template" id="post-<?php the_ID(); ?>" style="border: 1px solid orange">
 
-        <div class="row">
+    <div class="header-section" style="border: 1px solid green">
+        <header>
+            <h1>The Lazy Tribune</h1>
+        </header><!-- .entry-header -->
+        <aside>
+            <div class="issue">NO. <?php the_ID();?></div>
+            <div class="date"><?php the_date(); ?></div>
+            <div class="edition"><?php the_title(); ?> Edition</div>
+        </aside>
+    </div>
+    <div class="main-section" style="border: 1px solid green">
+        <div class="article-1"><?php get_template_part( 'issue-templates/issue', 'featured_post' ); ?></div>
+        <div class="article-2"><?php get_template_part( 'issue-templates/issue', 'featured_post' ); ?></div>
+        <div class="article-3"><?php get_template_part( 'issue-templates/issue', 'featured_post' ); ?></div>
+    </div>
+    <div class="middle-section" style="border: 1px solid green">
+        <div class="article-4">4<?php get_template_part( 'issue-templates/issue', 'tiny_post' ); ?></div>
+        <div class="article-5">5<?php get_template_part( 'issue-templates/issue', 'tiny_post' ); ?></div>
+        <div class="article-6">6<?php get_template_part( 'issue-templates/issue', 'tiny_post' ); ?></div>
+    </div>
+    <div class="right-section" style="border: 1px solid green">
+        <div class="article-7">7<?php get_template_part( 'issue-templates/issue', 'tiny_post' ); ?></div>
+        <div class="article-8">8<?php get_template_part( 'issue-templates/issue', 'tiny_post' ); ?></div>
+        <div class="article-9">9<?php get_template_part( 'issue-templates/issue', 'tiny_post' ); ?></div>
+    </div>
+    <div class="bottom-section" style="border: 1px solid green">
+        <div class="article-10">10 <?php get_template_part( 'issue-templates/issue', 'medium_post' ); ?></div>
+    </div>
 
-            <div class="col-md-12 content-area" id="primary">
-
-                <main class="site-main" id="main" role="main">
-
-                    <article class="issue-template" id="post-<?php the_ID(); ?>">
-                        <div class="header-section">
-                            <header>
-                                <h1>The Lazy Tribune</h1>
-                            </header><!-- .entry-header -->
-                            <aside>
-                                <div class="issue">NO. 1</div>
-                                <div class="date"><?php the_date(); ?></div>
-                                <div class="edition"><?php the_title(); ?> Edition</div>
-                            </aside>
-                        </div>
-                        <div class="main-section">
-                            <?php get_template_part( 'issue-templates/issue', 'featured_post' ); ?>
-                        </div>
-                        <div class="right-section">
-                            <?php get_template_part( 'issue-templates/issue', 'tiny_post' ); ?>
-                        </div>
-                        <div class="bottom-section"><?php get_template_part( 'issue-templates/issue', 'medium_post' ); ?></div>
-
-                    </article><!-- #post-## -->
-
-                </main><!-- #main -->
-
-            </div><!-- #primary -->
-
-        </div><!-- .row end -->
-
-    </div><!-- #content -->
-
-</div><!-- #full-width-page-wrapper -->
+</article><!-- #post-## -->
 
 <div class="wrapper">
     <div class="<?php echo esc_attr( $container ); ?>" id="content">
